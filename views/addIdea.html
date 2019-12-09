@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="height=device-height, initial-scale=1">
+  <link rel="stylesheet" href="../src/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  <script type="text/javascript" src = "../assets/androidjs.js"></script>
+  <script type="text/javascript" src = "../js/functions.js"></script>
+</head>
+<body>
+  <div class="top-empty"> </div>
+  <div class = "top" id = "top">
+      <div class ="hamburger" onclick ="openCloseDrawer()">
+        <div class="ham"> </div>
+        <div class="ham"> </div>
+        <div class="ham"> </div>
+      </div>
+      <div class = "reload">
+        <img src="../img/reloadicon.png" class = "reload-img" id ="reload">
+      </div>
+    </div>
+    <div class = "drawer" id = "myDrawer">
+      <div class ="closeHamburger" id="closeham" onclick="openCloseDrawer()">
+          X
+      </div>
+      <div class = "drawerContent" id ="drawerContent">
+        <div class ="drawerTab ideas" id="listTab">
+            Idėjos
+        </div>
+        <div class ="drawerTab add" id="addTab">
+            Pridėti
+        </div>
+      </div>
+    </div>
+    <div class ="addIconBlock">
+      <img src = "../img/cam.png" class= "addIcon">
+      <img src = "../img/microphone.png" class= "addIcon">
+      <img src = "../img/reference.png" class= "addIcon">
+    </div>
+    <div class ="addContentBlock" contenteditable="true">
+
+    </div>  
+    <div class ="content-center margin">
+      <div class = "btn addidea" id = "addbutton"> Pridėti </div>
+    </div>
+
+</body>
+</html>
