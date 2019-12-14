@@ -66,16 +66,18 @@ div{
 .top{
 	display: flex;
     justify-content: flex-end;
-	height: 10%;
-	border-bottom: 3px solid #847f7f;
-	background-color: #e8e8e8;
+	height: 65px;
+	border-bottom: 2px solid #847f7f;
+	background-image: url("../img/images.jpg");
 	position: fixed;
 	top: 0;
+    z-index: 999;
  	width: 100%;
 }
 .top-empty{
-	height: 10%;
+	height: 65px;
 	width: 100%;
+    margin-bottom: 10px;
 }
 .sticky {
   position: fixed;
@@ -93,6 +95,7 @@ div{
     background-color: #b6b6b6;
     cursor: pointer;
     transition: 0.5s;
+    z-index: 9999;
 }
 .drawerContent{
 	display: flex;
@@ -133,8 +136,51 @@ div{
     font-weight: 1000;
     margin-right: 7%;
 }
-.ideas{
+.ideasList{
+    height: 150px;
+    width: 97%;
+    max-width: 97%;
+    margin: 0 auto;
+    background-color: #c5c5c5;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    content: "";
+    position: relative;
+    word-break: break-all;
 
+}
+.ideaTime{
+    height: 20%;
+    border-bottom: solid 1px;
+    border-color: #88888863;
+}
+.ideaContent{
+    height: 80%;
+    padding: 8px;
+}
+.ideaContent:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    background: linear-gradient(transparent 96px, #cccccc);
+
+}
+.ideatextArea{
+    resize: none;
+    overflow: hidden;
+    min-height: 25px;
+    max-height: 400px;
+    width: 100%;
+    outline:none;
+    border: none;
+    background: none;
+}
+.ideas{
 }
 .ideas::after{
 	content: url(../img/list.png);
@@ -144,10 +190,10 @@ div{
     margin-right: 5%;
 }
 .hamburger{
-   	position: absolute;
+    position: absolute;
     height: 6%;
     left: 4%;
-    top: 17%;
+    top: 23%;
     width: 4%;
     cursor: pointer;
 }
@@ -204,30 +250,79 @@ div{
 	margin-right: 6px;
 }
 .ideaBlock{
-	width: 80%;
-	margin: 0 auto;
-	background-color: red;
+	width: 100%;
+    height: 88%;
 	
 }
 .addIconBlock{
-	display: flex;
-	justify-content: space-between;
-	height:8%;
-	margin-bottom: 7%;
+    display: flex;
+    justify-content: space-between;
+    height: 57px;
+    margin-bottom: 7%;
 }
 .addIcon{
-	height: 100%;
-    margin: 2vh;
+    height: 56px;
+    margin: 16px;
 }
 .addidea{
 	background-color: #aa7070;
     color: #f1efef;
 }
 .addContentBlock{
-	background-color: #b9b7b7;
+    background-color: #b9b7b7;
     margin: 7px;
     padding: 3%;
     outline: none;
     border-radius: 19px;
-    min-height: 73%;
+    min-height: 479px;
+}
+.tagContainer{
+    width: 100%;
+    min-height: 50px;
+    max-height: 500px;
+}
+.tagBlock{
+    background-color: #b9b7b7;
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 97%;
+    margin: 7px;
+    min-height: 42px;
+    border-radius: 6px;
+}
+.tagInput{
+    width: 100%;
+    padding: 5px;
+    padding-left: 7px;
+    border: none;
+    flex: 1;
+    font-size: 24px;
+    background-color: #b9b7b7;
+    border-radius: 6px;
+}
+.tagTextTop{
+    padding-left: 10px;
+    font-size: 20px;
+    color:#5c595b;
+}
+.tag{
+    height: 35px;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 7px;
+    padding-right: 10px;
+    max-width:200px;
+    overflow: hidden;
+    padding-left: 10px;
+    margin: 4px;
+}
+.tag::after{
+    content: 'x';
+    font-size: 19px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin-left: 12px;
+    color: #ba8282;
 }

@@ -38,9 +38,16 @@
       <img src = "../img/microphone.png" class= "addIcon">
       <img src = "../img/reference.png" class= "addIcon">
     </div>
-    <div class ="addContentBlock" contenteditable="true">
-
+    <div class ="addContentBlock" id ="ideaContent">
+      <textarea rows="1" cols="50" class = "ideatextArea" oninput="auto_grow(this)">
+      </textarea>
     </div>  
+    <div class ="tagContainer">
+      <span class = "tagTextTop">Žymos:</span>
+      <div class = "tagBlock" id="tagBlock">
+        <input type="text" class ="tagInput" id ="tags">
+      </div>
+    </div>
     <div class ="content-center margin">
       <div class = "btn addidea" id = "addbutton"> Pridėti </div>
     </div>
