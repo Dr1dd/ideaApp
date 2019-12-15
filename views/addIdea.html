@@ -1,0 +1,86 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="height=device-height, initial-scale=1">
+  <link rel="stylesheet" href="../src/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  <script type="text/javascript" src = "../assets/androidjs.js"></script>
+  <script type="text/javascript" src = "../js/functions.js"></script>
+</head>
+<body>
+  <div class="top-empty"> </div>
+  <div class = "top" id = "top">
+      <div class ="hamburger" onclick ="openCloseDrawer()">
+        <div class="ham"> </div>
+        <div class="ham"> </div>
+        <div class="ham"> </div>
+      </div>
+      <div class = "reload">
+        <img src="../img/reloadicon.png" class = "reload-img" id ="reload">
+      </div>
+    </div>
+    <div class = "drawer" id = "myDrawer">
+      <div class ="closeHamburger" id="closeham" onclick="openCloseDrawer()">
+          X
+      </div>
+      <div class = "drawerContent" id ="drawerContent">
+        <div class ="drawerTab ideas" id="listTab">
+            Idėjos
+        </div>
+        <div class ="drawerTab add" id="addTab">
+            Pridėti
+        </div>
+      </div>
+    </div>
+    <div class ="addIconBlock">
+      <img src = "../img/cam.png" class= "addIcon" id ="cameraIcon">
+      <img src = "../img/microphone.png" class= "addIcon" id ="micIcon">
+      <img src = "../img/reference.png" class= "addIcon" id="linkIcon">
+    </div>
+    <div class ="addContentBlock" id ="ideaContent">
+      <textarea rows="1" cols="50" id="textarea" class = "ideatextArea" oninput="auto_grow(this) ">
+      </textarea>
+    </div>  
+    <div class ="tagContainer">
+      <span class = "tagTextTop">Žymos:</span>
+      <div class = "tagBlock" id="tagBlock">
+        <input type="text" class ="tagInput" id ="tags">
+      </div>
+    </div>
+    <div class ="content-center margin">
+      <div class = "btn addidea" id = "addbutton"> Pridėti </div>
+    </div>
+    <div class = "cameraDiv" id ="cameraDiv">
+        <div class = "closeCamera" id="closeCam"> X </div>
+      <div class = "addIconBlock around camblock">
+            <img src="../img/player_record.png" class = "addIcon camaddidea" id="record">
+            <img src="../img/takephoto.png" class = "addIcon camaddidea" id="takephoto">
+      </div>
+       <video id = "camera" class = "camera" autoplay></video>
+    </div>
+    <div class ="soundRecord" id ="soundRecord">
+      <div class ="soundRecWindow" id ="soundRecWindow">
+        <div class ="top-nav-sound">
+          <div class ="closeSound" id ="closeSound"> X </div>
+        </div>
+        <div class ="soundRecordingContainer">
+          <img class= "soundRecordingIcon" src="../img/sound-green.png" id="soundIcon">
+        </div>
+      </div>
+    </div>
+    <div class ="linkContainer" id ="link">
+      <div class ="linkWindow" id ="linkWindow">
+        <div class ="top-nav-sound">
+          <div class ="closeLink" id ="closeLink"> X </div>
+        </div>
+        <div class = "loginInputBlock">
+          <input type="text" name="linkInput" class = "loginput myfont" id ="linkInput" placeholder="Link">
+        </div>
+        <div class ="content-center linkbtnheight">
+           <div class = "linkbtn" id = "addLink"> Pridėti </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
