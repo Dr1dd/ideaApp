@@ -38,12 +38,68 @@
     </div>
     <div>
       <div class ="ideaBlock" id = "allIdeas">
-        <div class ="ideasList" contenteditable="true">
-          <div class ="ideaTime"> </div>
-          <div class ="ideaContent"> </div>
+        <div class ="filterBlock">
+          <div class ="filterContainer" id ="openFilter">
+            <img src="../img/filter.png" id="filterimg">
+            <div class ="filter">
+             Filtras
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="filterWindow" id ="filterWindow">
+       <div class = "closeCamera" id="closeFilter"> X </div>
+       <div class="topFilter">
+       </div>
+       <div class ="filterOptionsBlock">
+        <div class ="filterOptions" >
+          <div class ="filterTitle"> Sukūrimo data</div>
+          <div class = "filterText"> Pastaroji valanda </div>
+          <div class = "filterText"> Šiandien </div>
+          <div class = "filterText"> Šią savaitę</div>
+          <div class = "filterText"> Šį mėnesį </div>
+          <div class = "filterText"> Šiais metais </div>
+        </div>
+        <div class ="filterOptions" >
+          <div class ="filterTitle"> Tipas</div>
+          <div class = "filterText"> Tekstas </div>
+          <div class = "filterText"> Vaizdo įrašas </div>
+          <div class = "filterText"> Garso įrašas </div>
+          <div class = "filterText"> Nuoroda </div>
+        </div>
+        <div class ="filterOptions" >
+          <div class ="filterTitle"> Ilgis (simboliais) </div>
+          <div class = "filterText"> &#60;50 </div>
+          <div class = "filterText"> &#60;100 </div>
+          <div class = "filterText"> &#60;200 </div>
+          <div class = "filterText"> &#60;1000 </div>
+        </div>
+       </div>
+       <div class ="categoriesBlock">
+          <span class ="categoryTitle"> Kategorijos: </span>
+          <div class ="checkBoxBlock"> 
+            <input type="checkbox" class="form-checkbox" id="check-one" ><label for="check-one">Laisvalaikis</label>
+            <input type="checkbox" class="form-checkbox" id="check-two" ><label for="check-one">Verslas</label>
+            <input type="checkbox" class="form-checkbox" id="check-one" ><label for="check-one">Marketingas</label>
+          </div>
+       </div>
+       <div class ="content-center fil">
+          <div class ="top-nav-sound">
+            <div class = "btn filbtn" id = "Filterbtn"> Filtruoti </div>
+          </div>
+       </div>
+    </div>
+        <div class ="viewContent" id ="viewContent">
+          <div class ="contentWindow" id ="contentWindow">
+            <div class ="top-nav-content">
+              <div class ="closeLink" id ="closeContent"> X </div>
+            </div>
+            <div class ="dateView" id="dateView"> </div>
+            <div class ="addContentBlock" id ="ideaViewContent">
+            </div>
+        </div>
+        </div>
   </div>
 </body>
 </html>

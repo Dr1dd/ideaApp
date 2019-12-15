@@ -5,13 +5,22 @@ body{
 div{
 	user-select: none;
 }
+h1{
+    text-align: center;
+    font-size: 43px;
+    padding-top: 54px;
+    color: #747272;
+}
 .loginMain{
 	height: 62%;
 }
 .content-center{
 	display: flex;
-	height: 6%;
+    height: 40px;
 	justify-content: center;
+}
+.fil{
+    margin-top:29px;
 }
 .margin{
 	margin: 2vh;
@@ -26,7 +35,7 @@ div{
 }
 .loginInputBlock{
 	display: flex;
-	height: 33%;
+	height: 43%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -45,6 +54,25 @@ div{
     box-sizing: border-box;
     opacity: 0.7;
 }
+.registerinput{
+    height: 37%;
+}
+.registerBlock{
+    width: 100%;
+    height: 32px;
+}
+.registerText{
+    text-align: center;
+    color: #989898;
+    font-size: 20px
+}
+.registration{
+    color: #9f5e43
+}
+.regMain{
+    height: 100%;
+    width: 100%;
+}
 .btn{
 	border-radius: 8px;
     padding: 2% 0;
@@ -58,6 +86,12 @@ div{
     color: #878787;
     text-align: center;
     font-size: 6vw;
+}
+.filbtn{
+    background-color: #7a0d0d;
+    color: #ffffff;
+    width: 144px;
+    font-size: 25px;
 }
 .main{
 	height:100%;
@@ -155,10 +189,13 @@ div{
     height: 20%;
     border-bottom: solid 1px;
     border-color: #88888863;
+    line-height: 32px;
+    text-align: center;
 }
 .ideaContent{
     height: 80%;
     padding: 8px;
+    font-size: 15px;
 }
 .ideaContent:before{
     content: '';
@@ -175,6 +212,7 @@ div{
     overflow: hidden;
     min-height: 25px;
     max-height: 400px;
+    font-size: 15px;
     width: 100%;
     outline:none;
     border: none;
@@ -229,7 +267,7 @@ div{
     padding: 3px;
     border-width: 0px;
     border-radius: 5px;
-    height: 5vh;
+    height: 33px;
     font-size: 4vw;
     background: #d3d3d3;
     outline: none;
@@ -254,15 +292,58 @@ div{
     height: 88%;
 	
 }
+.filterBlock{
+    width: 100%;
+    height: 51px;
+    display: flex;
+    justify-content: flex-end;
+}
+.filterContainer{
+    display: inline-flex;
+    padding: 5px;
+        margin: 8px;
+    background-color: grey;
+    border-radius: 7px;
+}
+.filter{
+    color: black;
+    line-height: 27px;
+    font-weight: 600;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+}
+.filterWindow{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 0;
+    transition: 0.2s;
+    right: 0;
+    background-color: #e8e8e8;
+    z-index: 99999;
+}
+#filterimg{
+    height: 24px;
+    margin: 1px;
+    margin-right: 9px;
+}
 .addIconBlock{
     display: flex;
     justify-content: space-between;
     height: 57px;
+    width: 100%;
     margin-bottom: 7%;
+}
+.camblock{
+    width: 92%;
 }
 .addIcon{
     height: 56px;
     margin: 16px;
+}
+.camaddidea{
+    margin: 8px;
 }
 .addidea{
 	background-color: #aa7070;
@@ -273,8 +354,9 @@ div{
     margin: 7px;
     padding: 3%;
     outline: none;
+    font-size: 15px;
     border-radius: 19px;
-    min-height: 479px;
+    min-height: 500px;
 }
 .tagContainer{
     width: 100%;
@@ -325,4 +407,307 @@ div{
     font-family: "Arial Black", Gadget, sans-serif;
     margin-left: 12px;
     color: #ba8282;
+}
+.cameraDiv{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background-color: lightgrey;
+}
+.closeCamera{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30;
+    color: #7a0d0d;
+}
+.closeFilter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30;
+    color: #7a0d0d;
+    transition: 0.5s;
+}
+.camera{
+    width: 100%;
+    z-index: 99999;
+}
+.cameraIcon{
+    height: 100%;
+}
+.top-div{
+    height: 62px;
+}
+.around{
+    justify-content: space-around;
+}
+.imagePreview{
+    height: 55px;
+    width: 71px;
+    margin:5px;
+}
+.videoPreview{
+    height: 55px;
+    width: 71px;
+    margin:5px;
+}
+.soundPreview{
+    height: 55px;
+    width: 71px;
+    margin:5px;
+}
+.soundRecord{
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    background-color: #1212128a;
+}
+.soundRecWindow{
+        visibility: hidden;
+    width: 95%;
+    height: 139px;
+    margin: 185px auto;
+    left: 9px;
+    opacity: 0;
+    top: auto;
+    position: fixed;
+    border-radius: 12px;
+    background-color: #f6f6f6;
+    transition: 0.5s;
+}
+.top-nav-sound{
+    display: flex;
+    justify-content: flex-end;
+}
+.closeSound{
+    z-index: 9999;
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30;
+    color: #585353;
+}
+.soundRecordingContainer{
+    position: fixed;
+    right: 83px;
+    height: 95px;
+    margin: -43px;
+    width: 50%;
+}
+.soundRecordingIcon{
+    height: 100%;
+    width: 40%;
+}
+.linkContainer{
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    background-color: #1212128a;
+}
+.linkWindow{
+        visibility: hidden;
+    width: 95%;
+    height: 146px;
+    margin: 185px auto;
+    left: 9px;
+    opacity: 0;
+    top: auto;
+    position: fixed;
+    border-radius: 12px;
+    background-color: #f6f6f6;
+    transition: 0.5s;
+}
+.myfont{
+    font-size: 20px;
+}
+.closeLink{
+    z-index: 9999;
+    margin: 0px;
+    margin-right: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30;
+    color: #585353;
+}
+.linkbtn{
+    border-radius: 8px;
+    padding: 7px 0;
+    width: 34%;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #80c484;
+    color: #878787;
+    text-align: center;
+    font-size: 20px;
+}
+.linkbtnheight{
+    height: 33px;
+}
+/*CHECKBOXES*/
+.form-checkbox
+{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #ffffff;;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 3px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+.form-checkbox:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     color: white;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+.form-checkbox:hover
+{
+     background-color: #ffffff;
+}
+.form-checkbox:checked
+{
+     background-color: #bab7b7;
+}
+label
+{
+     font: 15px/1.7 'Open Sans', sans-serif;
+     color: #333;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     cursor: pointer;
+} 
+/*checkbox end*/
+.topFilter{
+    width: 100%;
+    height: 65px;
+    border-bottom: solid 2px #7a0d0d;
+}
+.filterOptionsBlock{
+    display: flex;
+    justify-content: space-between;
+    height: 322px;
+    width: 100%;
+}
+.filterOptions{
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}
+.filterTitle{
+    font-size: 14px;
+    color: #2a2a2a;
+    border-bottom: #7a0d0d solid 1px;
+}
+.filterText{
+    font-size: 15px;
+    margin-top: 27px;
+    text-align: left;
+    color: #434343;
+    padding-left: 10;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.checkBoxBlock{
+    margin: 10;
+
+}
+.categoryTitle{
+    color: #434343;
+    padding-left: 10;
+    margin: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.listText{
+    width: 100%;
+}
+.linkClass{
+     display: block;
+    height: 14px;
+    width: 71px;
+    margin: 5px;
+    text-align: center;
+    line-height: 15px;
+}
+.viewContent{
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    background-color: #1212128a;
+}
+.contentWindow{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    background-color: #f6f6f6;
+    transition: 0.5s;
+}
+.closeContent{
+    z-index: 9999;
+    margin: 0px;
+    margin-right: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30;
+    color: #585353;
+}
+.dateView{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 21px;
+    color: #d77373;
+}
+@keyframes rotateIcon {
+     0% {
+        transform: rotate(0deg)
+      }
+      25% {
+        transform: rotate(45deg)
+      }
+      50%{
+        transform: rotate(0deg)
+      }
+       50%{
+        transform: rotate(-45deg)
+      }
+      100% {
+        transform: rotate(0deg)
+      }
+    }
+.top-nav-content{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 23px;
 }

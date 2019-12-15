@@ -31,7 +31,7 @@ back.on('get-data', function(filepath){
 	        
 			fs.readFile(path.join(filepath, file), 'utf-8', function(err, data){
 				if(err) back.send('get-data-result', 'error');
-				else back.send('get-data-result', data);
+				else back.send('get-data-result', data, file);
 			})
 	        console.log(file); 
 	    });
